@@ -7,3 +7,9 @@ box-sizing: border-box;
 body{
     background-color: #181818;
 }
+#list{
+    background-color: #3f3f3f;
+}
+#inp1{
+    align-items: center;
+}
