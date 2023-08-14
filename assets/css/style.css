@@ -1,13 +1,14 @@
-*{
-padding: 0;
-margin: 0;
-box-sizing: border-box;
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
-body{
+body {
     background-color: #181818;
 }
-#list{
+
+#list1 {
     background-color: #2a2a2a;
     padding: 10rem;
     border-radius: 8px;
@@ -19,10 +20,11 @@ body{
 
 
 
-    
+
 }
-div #inp1{
-    background-color:#3f3f3f ;
+
+div #inp1 {
+    background-color: #3f3f3f;
     border: none;
     border-radius: 5px;
     width: 70%;
@@ -30,28 +32,32 @@ div #inp1{
     height: 50px;
     margin-top: 10px;
     font-size: 1.3rem;
-    
-   
+
+
 }
-#inp1:focus{
-    outline:none;
+
+#inp1:focus {
+    outline: none;
 }
-button{
+
+button {
     background-color: #3f3f3f;
     color: white;
     padding: 1rem;
     border-radius: 8px;
     margin: 10px;
     border: none;
-    
-    
-   
+
+
+
 }
-button:hover{
-    cursor : pointer;
+
+button:hover {
+    cursor: pointer;
     background-color: #838383;
 }
-#d1{
+
+#d1 {
     align-items: center;
     margin-top: 90px;
     border-radius: 10px;
@@ -60,20 +66,20 @@ button:hover{
     margin-right: 10rem;
 
 }
-input{
+
+input {
     color: #f0f0f0;
 }
 
-.listitems{
-    background-color: #3f3f3f;
-display: flex;
-justify-content: left;
+#list {
+    background-color: #838383;
+    color: #f0f0f0;
+    font-size: 30px;
+    text-align: left;
+    
+    
 }
-.btn{
-    background-color: #1c1b1b;
-    border: none;
-    padding: 20px;
-    border-radius: 10px;
-    margin-left: 40rem;
+#yip{
+    display: flex;
+    justify-content: flex-end;
 }
-
