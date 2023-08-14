@@ -8,8 +8,71 @@ body{
     background-color: #181818;
 }
 #list{
+    background-color: #2a2a2a;
+    padding: 10rem;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    padding: 35px;
+
+
+
+    
+}
+div #inp1{
+    background-color:#3f3f3f ;
+    border: none;
+    border-radius: 5px;
+    width: 70%;
+    padding: 0.8rem;
+    height: 50px;
+    margin-top: 10px;
+    font-size: 1.3rem;
+    
+   
+}
+#inp1:focus{
+    outline:none;
+}
+button{
     background-color: #3f3f3f;
+    color: white;
+    padding: 1rem;
+    border-radius: 8px;
+    margin: 10px;
+    
+    
+   
 }
-#inp1{
+button:hover{
+    cursor : pointer;
+    background-color: #838383;
+}
+#d1{
     align-items: center;
+    margin-top: 90px;
+    border-radius: 10px;
+    height: 80rem;
+    margin-left: 10rem;
+    margin-right: 10rem;
+
 }
+input{
+    color: #f0f0f0;
+}
+
+.listitems{
+    background-color: #3f3f3f;
+display: flex;
+justify-content: left;
+}
+.btn{
+    background-color: #1c1b1b;
+    border: none;
+    padding: 20px;
+    border-radius: 10px;
+    margin-left: 40rem;
+}
+
