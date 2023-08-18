@@ -1,85 +1,111 @@
-* {
+*{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
-
-body {
+body{
     background-color: #181818;
+    font-family: sans-serif Poppins;
 }
-
-#list1 {
+#backd{
+    width: 90%;
+    height: fit-content;
+    justify-content: center;
+    margin: auto;
+    margin-top: 5%;
     background-color: #2a2a2a;
-    padding: 10rem;
-    border-radius: 8px;
+}
+.inpt1 input{
+    background-color: transparent;
+    margin: auto;
+    outline: none;
+}
+.inputbox{
     display: flex;
     flex-direction: row;
-    align-content: center;
-    justify-content: center;
-    padding: 35px;
-
-
-
 
 }
-
-div #inp1 {
+.input-field input{
     background-color: #3f3f3f;
+    justify-content: center;
+    align-items: center;
+    text-align: start;
     border: none;
-    border-radius: 5px;
-    width: 70%;
-    padding: 0.8rem;
-    height: 50px;
-    margin-top: 10px;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-top: 10%;
+    margin-left: 10%;
     font-size: 1.3rem;
-
-
+    color: #f8fafc;
+    width: 50rem;
+   
 }
-
-#inp1:focus {
+.input-field input:focus{
     outline: none;
 }
 
-button {
+.inpt1 input:focus{
+    outline: none;
+
+}
+#greything{
     background-color: #3f3f3f;
-    color: white;
+    border: none;
+    padding: 29px;
+    border-radius: 8px;
+    margin-left: 5px;
+    margin-top: -100;
+
+}
+#greything:hover{
+    cursor: pointer;
+    background-color: #636060;
+}
+.hidden{
+    display: none;
+}
+#list{
+    background-color: transparent;
+    justify-content: center;
+    align-items: center;
+    text-align: start;
     padding: 1rem;
     border-radius: 8px;
-    margin: 10px;
-    border: none;
-
-
-
+    margin: 10%;
+    font-size: 1.3rem;
+    color: #f8fafc;
+    width: 50rem;
 }
-
-button:hover {
-    cursor: pointer;
-    background-color: #838383;
-}
-
-#d1 {
-    align-items: center;
-    margin-top: 90px;
-    border-radius: 10px;
-    height: 80rem;
-    margin-left: 10rem;
-    margin-right: 10rem;
-
-}
-
-input {
-    color: #f0f0f0;
-}
-
-#list {
-    background-color: #838383;
-    color: #f0f0f0;
-    font-size: 30px;
-    text-align: left;
-    
-    
-}
-#yip{
+.listitems{
+    background-color: #3f3f3f;
+    margin-bottom: 2%;
+    padding: 1rem;
+    border-radius: 8px;
+    font-size: 1.3rem;
     display: flex;
-    justify-content: flex-end;
+    list-style: none;
 }
+h1{
+    margin-right: 5%;
+}
+.btn{
+    background-color: #1c1b1b;
+    border: none;
+    padding: 20px;
+    border-radius: 20px;
+}
+.btn:hover{
+    cursor: pointer;
+    background-color: #292727;
+}
+button{
+    background-color: #1c1b1b;
+    border: none;
+    padding: 20px;
+    border-radius: 20px;
+}
+button:hover{
+    cursor: pointer;
+}
+/* verde botao normal 18af4d
+1ac54f hover */

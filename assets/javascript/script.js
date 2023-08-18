@@ -1,76 +1,87 @@
-class Task {
-    constructor(id, title, status) {
-        this.id = id;
-        this.title = title;
-        this.status = status;
+let flag = -1;
 
+class Task {
+    constructor(title, id, status) {
+        this.title = title;
+        this.id = id;
+        this.status = status;
     }
 }
-class TaskList {
+
+class Tasklist {
     constructor() {
         this.tasks = [];
     }
+
     addTask(param) {
-        this.tasks.push(param)
+        this.tasks.push(param);
     }
-    removeTask(id) {
-        this.tasks = this.tasks.filter((task) => task.id !== id);
+
+        removeTask(id) {
+            this.tasks = this.tasks.filter((task) => task.id !== id);
+        }
     }
-    markTask(id) {
-        this.tasks.forEach(task => {
-            if (task.id == id) {
-                tasks.status = !tasks.status;
-            }
 
-        })
-    }
-}
 
-const veryBigTaskList = new TaskList();
+const veryBigTaskList = new Tasklist();
 
-function creatTask() {
-    const taskTitle = document.getElementById("inp1").value;
-
-    const task = new Task(1, taskTitle, false)
-
+function taskcreate() {
+    let taskTitle = document.getElementById("inpt1").value;
+    const task = new Task(taskTitle, generateId(), false);
     veryBigTaskList.addTask(task);
-
-    console.log(veryBigTaskList);
-    renderTasks()
-
+    rendertasks();
+    clearSpace();
+    console.log(task);
 }
+
 function generateId() {
-    return Math.floor(Math.random() * 9000);
-
+    return Math.floor(Math.random() * 99999);
 }
 
-function renderTasks() {
-    let element = "";
+function clearSpace() {
+    document.getElementById("inpt1").value = "";
+}
 
+function rendertasks() {
+    let msg = "";
     veryBigTaskList.tasks.forEach(task => {
-        element += `
-<li id="${task.id}">
-<span id="${task.id}-title">${task.title}</span>
-<div id="yip">
-<button id="${task.id}-button" class="action"
-onclick="doeTask(${task.id})"><i class="fa-solid fa-check"></i>
-</button>
-<button class="action edit" onclick="editTask(${task.id})"><i class="fa-solid fa-pencil"></i></button>
-<button class="action remove" onclick="deleteTask(${task.id})"><i><i class="fa-solid fa-trash"></i></i></button>
-</div>
-</li>`;
-        
+        msg += `<div class="listitems">
+          <h1>${task.title}</h1>
+          <button id="${task.id}-button" onclick="doneTask(${task.id})"><i class="fas fa-check" style="color: #ffffff;"></i></button>
+          <button onclick="editTask(${task.id})"><i class="fas fa-pencil" style="color: #ffffff;"></i></button>
+          <button onclick="deleteTask(${task.id})"><i class="fas fa-trash" style="color: #ffffff;"></i></button>
+          </div>`;
     });
-    document.getElementById("list").innerHTML += element;
+    document.getElementById("list").innerHTML = msg;
+}
+
+function editTask(id){
+    let editar = "";
+    flag = id;
+    veryBigTaskList.tasks.forEach(task => {
+        if(task.id == id){
+            editar = task;
+        }
+    });
+    veryBigTaskList.removeTask(id);
+    document.getElementById("inpt1").value = editar.title;
 }
 
 function deleteTask(id) {
     veryBigTaskList.removeTask(id);
-    renderTasks()
-
+    rendertasks();
 }
 
-function doneTask(id){
-    veryBigTaskList.markTask(id);
+function doneTask(id) {
+    veryBigTaskList.tasks.forEach(task => {
+        if (task.id == id) {
+            task.status = !task.status;
+            const button = document.getElementById(`${task.id}-button`);
+            if (task.status) {
+                button.style.backgroundColor = '#18af4d';
+            } else {
+                button.style.backgroundColor = '#181818';
+            }
+        }
+    });
 }
-
